@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XcodePaste - Power Up Your Paste in Xcode. A powerful Xcode Source Editor Extension for text transformations.">
+    <title>XcodePaste - Power Up Your Paste</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">XcodePaste</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>XcodePaste</h1>
+            <p class="tagline">Power Up Your Paste</p>
+            <p class="description">A powerful Xcode Source Editor Extension that transforms how you paste text into your code. Save time and write cleaner code with essential text transformations.</p>
+            <a href="#download" class="btn-primary">Get XcodePaste</a>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Paste as Base64</h3>
+                    <p>Convert any text—or image data from your clipboard—into a Base64 encoded string. Perfect for embedding data directly in your code.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Paste as String Literal</h3>
+                    <p>Automatically escape quotes, newlines, and special characters. Paste HTML, JSON, or any multi-line text directly as a valid Objective-C or Swift string literal.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Paste as Unicode</h3>
+                    <p>Convert non-ASCII characters (including emojis) to their Unicode escape sequences. Great for internationalized apps.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Paste as URL Encoded</h3>
+                    <p>Transform URLs with Chinese or special characters into properly encoded strings. No more manual URL encoding!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Paste JSON as ObjC</h3>
+                    <p>Convert JSON strings directly into Objective-C dictionary, array, or string literals. Paste API responses as ready-to-use code instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Sort Imports</h3>
+                    <p>Automatically organize your import statements. Group framework imports (<>) and local imports (""), then sort alphabetically.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Examples Section -->
+        <section id="usage" class="usage">
+            <h2>Before & After</h2>
+            <p class="usage-intro">See how XcodePaste transforms your workflow:</p>
+
+            <div class="example-grid">
+                <!-- Base64 Example -->
+                <div class="example">
+                    <h3>Paste as Base64</h3>
+                    <div class="code-block">
+                        <div class="before">
+                            <h4>Clipboard Content:</h4>
+                            <code>Hello, World!</code>
+                        </div>
+                        <div class="after">
+                            <h4>After Paste:</h4>
+                            <code>SGVsbG8sIFdvcmxkIQ==</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- String Literal Example -->
+                <div class="example">
+                    <h3>Paste as String Literal</h3>
+                    <div class="code-block">
+                        <div class="before">
+                            <h4>Clipboard Content:</h4>
+                            <code>{"name": "John", "age": 30}</code>
+                        </div>
+                        <div class="after">
+                            <h4>After Paste (ObjC):</h4>
+                            <code>@"{\"name\": \"John\", \"age\": 30}"</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unicode Example -->
+                <div class="example">
+                    <h3>Paste as Unicode</h3>
+                    <div class="code-block">
+                        <div class="before">
+                            <h4>Clipboard Content:</h4>
+                            <code>Hello 👋 World</code>
+                        </div>
+                        <div class="after">
+                            <h4>After Paste:</h4>
+                            <code>Hello \U0001F44B World</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- URL Encoded Example -->
+                <div class="example">
+                    <h3>Paste as URL Encoded</h3>
+                    <div class="code-block">
+                        <div class="before">
+                            <h4>Clipboard Content:</h4>
+                            <code>你好世界</code>
+                        </div>
+                        <div class="after">
+                            <h4>After Paste:</h4>
+                            <code>%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JSON to ObjC Example -->
+                <div class="example">
+                    <h3>Paste JSON as ObjC Literal</h3>
+                    <div class="code-block">
+                        <div class="before">
+                            <h4>Clipboard Content (JSON):</h4>
+                            <pre><code>{
+  "users": [
+    {"name": "Alice", "id": 1},
+    {"name": "Bob", "id": 2}
+  ]
+}</code></pre>
+                        </div>
+                        <div class="after">
+                            <h4>After Paste (ObjC):</h4>
+                            <pre><code>@{
+    @"users": @[
+        @{@"name": @"Alice", @"id": @1},
+        @{@"name": @"Bob", @"id": @2}
+    ]
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sort Imports Example -->
+                <div class="example">
+                    <h3>Sort Imports</h3>
+                    <div class="code-block">
+                        <div class="before">
+                            <h4>Before:</h4>
+                            <pre><code>#import "MyClass.h"
+#import &lt;UIKit/UIKit.h&gt;
+#import &lt;Foundation/Foundation.h&gt;
+#import "Helper.h"</code></pre>
+                        </div>
+                        <div class="after">
+                            <h4>After:</h4>
+                            <pre><code>#import &lt;Foundation/Foundation.h&gt;
+#import &lt;UIKit/UIKit.h&gt;
+
+#import "Helper.h"
+#import "MyClass.h"</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation Section -->
+        <section id="download" class="download">
+            <h2>Installation</h2>
+            <div class="install-steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <p>Download and open XcodePaste.app</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <p>Click "Enable XcodePaste" to open System Settings</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <p>Ensure "XcodePaste Xcode Source Editor" is checked in Extensions</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <p>Relaunch Xcode — find XcodePaste in the Editor menu</p>
+                </div>
+            </div>
+            <div class="download-buttons">
+                <a href="https://github.com/rickytan/XPaste/releases" class="btn-primary">Download from GitHub</a>
+                <a href="https://apps.apple.com/app/xcodepaste" class="btn-secondary">App Store</a>
+            </div>
+            <div class="requirements">
+                <h3>Requirements</h3>
+                <ul>
+                    <li>macOS 11.0 or later</li>
+                    <li>Xcode 12 or later</li>
+                </ul>
+            </div>
+            <div class="shortcuts">
+                <h3>Customize Keyboard Shortcuts</h3>
+                <p>Open Xcode Preferences → Key Bindings → search "xcodepaste" → assign your favorite shortcuts.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/rickytan/XPaste">GitHub</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="https://github.com/rickytan/XPaste/issues">Support</a>
+            </div>
+            <div class="footer-contact">
+                <p>Contact: <a href="mailto:ricky_tan@live.cn">ricky_tan@live.cn</a></p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Ricky Tan. Made with ❤️ for developers.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
